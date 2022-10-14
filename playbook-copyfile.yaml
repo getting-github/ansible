@@ -1,0 +1,11 @@
+- 
+  name: Copy file to target
+  hosts: all
+  tasks:
+     - name: Copy file
+       copy:
+          src: /home/user/termprojekt/test.conf
+          dest: /home/user/testkopie.conf
+          owner: user
+          group: user
+          mode: 0644
