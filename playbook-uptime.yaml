@@ -3,4 +3,8 @@
     hosts: all
     tasks:
       - name: Execute the Uptime command over Command module
+        register: uptimeoutput
         command: "uptime"
+
+      - debug:
+          var: uptimeoutput.stdout_lines
