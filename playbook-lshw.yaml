@@ -7,7 +7,7 @@
         command: "lshw -short"
       - debug:
           var: lshwoutput.stdout_lines
-      -name: Uname command
+      - name: Uname command
        register: unameout
        command: "uname -a"
        - debug: unameout.stdout_lines
