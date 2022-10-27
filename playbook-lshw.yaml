@@ -1,0 +1,13 @@
+---
+  - name: List all relevant Hardware & OS
+    hosts: all
+    tasks:
+      - name: Execute the Uptime command over Command module
+        register: lshwoutput
+        command: "lshw -short"
+      - debug:
+          var: lshwoutput.stdout_lines
+      -name: Uname command
+       register: unameout
+       command: "uname -a"
+       - debug: unameout.stdout_lines
