@@ -1,5 +1,4 @@
----
- - name: Copy /var/log/audit/audit.log
+- name: Copy /var/log/audit/audit.log
   hosts: all
   tasks:
      - name: Copy file
