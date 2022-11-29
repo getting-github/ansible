@@ -1,0 +1,11 @@
+---
+ - name: Copy /var/log/audit/audit.log
+  hosts: all
+  tasks:
+     - name: Copy file
+       copy:
+          src: /var/log/audit/audit.log
+          dest: /home/logs/selinux/{{inventory_hostname_short}}.audit.log
+          owner: user
+          group: user
+          mode: 0644
