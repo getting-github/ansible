@@ -4,7 +4,7 @@
      - name: Copy file
        copy:
           src: /var/log/audit/audit.log
-          dest: /var/log/selinux/{{inventory_hostname_short}}.audit.log
+          dest: /var/log/selinux/{{inventory_hostname}}.audit.log
           owner: user
           group: user
           mode: 0644
