@@ -1,5 +1,7 @@
 - name: Copy /var/log/audit/audit.log
   hosts: all
+  become: yes
+  become_method: su
   tasks:
      - name: Copy file
        copy:
