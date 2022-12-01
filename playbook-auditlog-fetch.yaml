@@ -1,0 +1,9 @@
+- name: Store file into /var/log/selinux/host.example.com/tmp/somefile
+  hosts: all
+  become: yes
+  become_method: su
+  tasks:
+    - name: Fetch files
+      fetch:
+        src: /var/log/audit/audit.log
+        dest: /var/log/selinux
