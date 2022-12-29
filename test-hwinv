@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Hardware Inventory
+      shell:
+        cmd: grep 'cpu cores' /proc/cpuinfo
