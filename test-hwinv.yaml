@@ -2,4 +2,6 @@
 - hosts: all
   tasks:
     - name: Hardware Inventory
-      shell: hwinventory.sh >> hwinventory.txt
+      shell: hwinventory.sh >> /home/ansible/logs/hwinventory/hwinventory.txt
+      args:
+        chdir: /home/ansible/scripts
