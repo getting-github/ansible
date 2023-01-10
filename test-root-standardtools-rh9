@@ -1,8 +1,7 @@
 - hosts: all
   tasks:
     - name: install standard tools on redhat/rocky 9
-      become: true
-      become_user: root
+      become: True
       dnf:
         state: present
         update_cache: True
