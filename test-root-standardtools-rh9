@@ -5,9 +5,5 @@
       become_user: root
       dnf:
         state: present
-        name:
-          - config-manager --set-enabled crb
-          - epel-release
-          - ncdu
-          - nmtui
-          - open-vm-tools
+        update_cache: True
+        name: [ 'config-manager --set-enabled crb', 'epel-release', 'ncdu', 'nmtui', 'open-vm-tools' ]
